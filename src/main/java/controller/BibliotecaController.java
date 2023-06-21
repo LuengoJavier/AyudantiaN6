@@ -7,11 +7,9 @@ import model.Biblioteca;
 import model.Libro;
 import org.jooq.DSLContext;
 import org.jooq.impl.DSL;
-import view.VentanaLibros;
 
 import java.sql.Connection;
 import java.util.ArrayList;
-import java.util.List;
 
 public class BibliotecaController {
 	private Biblioteca biblioteca= new Biblioteca("Biblioteca Libre", "Calle Uruguay","8 am - 20 pm");
@@ -36,10 +34,10 @@ public class BibliotecaController {
 		return new BibliotecaDao().buscarLibroAutor(query,autor,estado);
 	}
 
-	public boolean eliminarLibro(Libro libro, boolean estado) {
+	public static boolean eliminarLibro(int codigo) {
 		Connection connection= DBConnector.connection("Biblioteca","root","");
 		DSLContext query= DSL.using(connection);
-		return new BibliotecaDao().eliminarLibro(query,libro,estado);
+		return new BibliotecaDao().eliminarLibro(query,codigo);
 	}
 	public ArrayList<Libro> obtenerLibros(boolean estado) {
 		Connection connection = DBConnector.connection("Biblioteca", "root", "");

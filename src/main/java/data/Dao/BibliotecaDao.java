@@ -3,21 +3,13 @@ package data.Dao;
 import model.Libro;
 import org.jooq.*;
 import org.jooq.impl.DSL;
-
 import javax.swing.*;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
 import static org.jooq.impl.DSL.name;
 import static org.jooq.impl.DSL.table;
 public class BibliotecaDao {
 	public static boolean agregarLibro(DSLContext query, Libro libro){
-		int codigoLibro = libro.getCodigoLibro();
-		String titulo = libro.getTitulo();
-		String autor = libro.getAutor();
-		String fechaPublicaion = libro.getFechaPublicacion();
-		String genero = libro.getGenero();
-		int stock = libro.getStock();
 		Table<org.jooq.Record> tablaLibro = table(name("Libro"));
 		Field[] columnas = tablaLibro.fields("id",
 				"titulo",
@@ -25,14 +17,14 @@ public class BibliotecaDao {
 				"fecha_publicacion",
 				"genero",
 				"stock");
-		int results = 0;
+		int resultado = 0;
 		try{
-			results = query.insertInto(tablaLibro, columnas[0], columnas[1], columnas[2], columnas[3], columnas[4], columnas[5])
-				.values(codigoLibro, titulo, autor, fechaPublicaion, genero, stock).execute();
+			resultado = query.insertInto(tablaLibro, columnas[0], columnas[1], columnas[2], columnas[3], columnas[4], columnas[5])
+				.values(libro.getCodigoLibro(),libro.getTitulo(),libro.getAutor(),libro.getFechaPublicacion(),libro.getGenero(),libro.getStock()).execute();
 		}catch (Exception e){
 			JOptionPane.showMessageDialog(null,"Error favor contactar al administradpr");
 		}
-		return results == 1;
+		return resultado == 1;
 	}
 	public static ArrayList<Libro> buscarLibroAutor(DSLContext query, String autor, boolean estado){
 		ArrayList<Libro>librosEncontrados=new ArrayList<>();
@@ -74,17 +66,10 @@ public class BibliotecaDao {
 		return librosEncontrados;
 	}
 
-	public boolean eliminarLibro(DSLContext query, Libro libro, boolean estado) {
-		String titulo=libro.getTitulo();
-		String autor=libro.getAutor();
-		System.out.println(autor);
-		String fecha=libro.getFechaPublicacion();
+	public boolean eliminarLibro(DSLContext query, int codigo) {
 		Table<org.jooq.Record> libros=table(name("libros"));
 		int result=query.deleteFrom(libros).where(
-						(DSL.field("titulo").eq(titulo)))
-				.and(DSL.field("autor").eq(autor)
-						.and(DSL.field("fecha").eq(fecha))
-						.and(DSL.field("stock").eq(estado)))
+						(DSL.field("id").eq(codigo)))
 				.execute();
 		return result==1;
 	}

@@ -9,13 +9,14 @@ public class VentanaMenu extends Ventana {
 
     private JLabel textoMenu;
     private JButton botonRegistrarLibro;
+    private JButton botonEliminarLibro;
     private JButton botonSalida;
     private JButton botonDevolverLibro;
     private JButton botonBuscarLibro;
     private JButton botonPrestarLibro;
 
     public VentanaMenu() {
-        super("Menu Biblioteca", 500, 520);
+        super("Menu Biblioteca", 500, 600);
         generarElementosVentana();
     }
 
@@ -24,6 +25,7 @@ public class VentanaMenu extends Ventana {
         generarBotonRegistrarLibro();
         generarBotonPrestarLibro();
         generarBotonBuscarLibro();
+        generarBotonEliminarLibro();
         generarBotonDevolverLibro();
         generarBotonSalir();
     }
@@ -46,21 +48,27 @@ public class VentanaMenu extends Ventana {
         this.add(this.botonBuscarLibro);
         this.botonBuscarLibro.addActionListener(this);
     }
+    private void generarBotonEliminarLibro() {
+        String textoBoton = "Eliminar libro";
+        this.botonEliminarLibro = super.generarBoton(textoBoton, 150, 260, 200, 50);
+        this.add(this.botonEliminarLibro);
+        this.botonEliminarLibro.addActionListener(this);
+    }
     private void generarBotonPrestarLibro(){
         String textoBoton = "Prestar Libro";
-        this.botonPrestarLibro=super.generarBoton(textoBoton, 150, 260, 200, 50);
+        this.botonPrestarLibro=super.generarBoton(textoBoton, 150, 340, 200, 50);
         this.add(this.botonPrestarLibro);
         this.botonPrestarLibro.addActionListener(this);
     }
     private void generarBotonDevolverLibro(){
         String textoBoton = "Devolver Libro";
-        this.botonDevolverLibro=super.generarBoton(textoBoton, 150, 340, 200, 50);
+        this.botonDevolverLibro=super.generarBoton(textoBoton, 150, 420, 200, 50);
         this.add(this.botonDevolverLibro);
         this.botonDevolverLibro.addActionListener(this);
     }
     private void generarBotonSalir() {
         String textoBoton = "Salir";
-        this.botonSalida = super.generarBoton(textoBoton, 175, 420, 150, 40);
+        this.botonSalida = super.generarBoton(textoBoton, 175, 520, 150, 40);
         this.add(this.botonSalida);
         this.botonSalida.addActionListener(this);
     }
@@ -74,6 +82,10 @@ public class VentanaMenu extends Ventana {
         }
         if(e.getSource() == this.botonBuscarLibro){
             VentanaBuscar ventanaBuscar= new VentanaBuscar();
+            this.dispose();
+        }
+        if(e.getSource() == this.botonEliminarLibro){
+            VentanaEliminar ventanaEliminar = new VentanaEliminar();
             this.dispose();
         }
         if(e.getSource() == this.botonPrestarLibro){

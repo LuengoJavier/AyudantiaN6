@@ -13,20 +13,22 @@ public class DBGenerator {
         crearBaseDato(create, nombreBD);
         create = actualizarConexion(connection, nombreBD);
         crearTablaLibro(create);
-        DBConnector.closeConnection(); }
+        DBConnector.closeConnection();
+    }
     //Metodo para conectarse a una base de datos ya creada
     public static DSLContext conectarBD(String nombre) throws ClassNotFoundException {
-        Connection connection = DBConnector.connection(nombre, "root", "");
-        DSLContext create = DSL.using(connection);
-        return create;
+        Connection connection = DBConnector.connection(nombre,"root","");
+        return DSL.using(connection);
     }
-    private static void crearBaseDato(DSLContext create, String nombreBD) {
+    //Crea una base de datos en caso de que no exista
+    private static void crearBaseDato(DSLContext create, String nombreBD){
         create.createDatabaseIfNotExists(nombreBD).execute();
     }
-    private static DSLContext actualizarConexion(Connection connection, String nombreBD) {
+    //Actualiza la conexion inicial para conectar a la base de datos
+    private static DSLContext actualizarConexion(Connection connection,String nombreBD){
         DBConnector.closeConnection();
-        connection = DBConnector.connection(nombreBD, "root", "");
-        DSLContext create = DSL.using(connection);
+        connection= DBConnector.connection(nombreBD,"root","");
+        DSLContext create =DSL.using(connection);
         return create;
     }
     private static void crearTablaLibro(DSLContext create) {

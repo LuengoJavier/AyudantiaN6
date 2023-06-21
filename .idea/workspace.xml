@@ -4,14 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dabe3dfa-2660-4579-8bce-d6c602e8c32f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/data/DBGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/view/VentanaMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/view/VentanaRegistro.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/view/VentanaTabla.java" afterDir="false" />
+    <list default="true" id="dabe3dfa-2660-4579-8bce-d6c602e8c32f" name="Changes" comment="Actualización codigo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/BibliotecaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/BibliotecaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/DBConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/DBConnector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/DBGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/DBGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/Dao/BibliotecaDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/Dao/BibliotecaDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Libro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Libro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/principal/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/principal/Launcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/VentanaBuscar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/VentanaBuscar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/VentanaEliminar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/VentanaEliminar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/VentanaLibros.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/VentanaMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/VentanaMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +31,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
@@ -49,6 +59,10 @@
     &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/jluen/IdeaProjects/AyudantiaN6&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
@@ -60,6 +74,21 @@
       <recent name="data.Dao" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="Launcher" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="principal.Launcher" />
+      <module name="AyudantiaN6" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="principal.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -69,7 +98,17 @@
       <option name="presentableId" value="Default" />
       <updated>1683162411293</updated>
       <workItem from="1685833484689" duration="56000" />
+      <workItem from="1686668605496" duration="2411000" />
+      <workItem from="1686791203744" duration="4000" />
     </task>
+    <task id="LOCAL-00001" summary="Actualización codigo">
+      <created>1686023061707</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1686023061707</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -85,5 +124,22 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Actualización codigo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Actualización codigo" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.ClassNotFoundException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint enabled="true" type="java-exception" />
+      </default-breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

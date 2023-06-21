@@ -13,7 +13,7 @@ public class VentanaBuscar extends Ventana {
 	private JTextField campoAutor;
 
 	public VentanaBuscar(){
-		super("Búsqueda de Estudiante", 500, 520);
+		super("Búsqueda de libro", 500, 520);
 		generarElementosVentana();
 	}
 	private void generarElementosVentana() {
